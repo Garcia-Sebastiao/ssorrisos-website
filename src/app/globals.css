@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: assistantRegular;
+  src: url("../assets/fonts/Assistant/Assistant-Regular.ttf");
+}
+@font-face {
+  font-family: rubikRegular;
+  src: url("../assets/fonts/Rubik/Rubik-Regular.ttf");
+}
+@font-face {
+  font-family: rubikMedium;
+  src: url("../assets/fonts/Rubik/Rubik-Medium.ttf");
+}
+@font-face {
+  font-family: rubikBold;
+  src: url("../assets/fonts/Rubik/Rubik-Bold.ttf");
+}
+@font-face {
+  font-family: assistantSemiBold;
+  src: url("../assets/fonts/Assistant/Assistant-SemiBold.ttf");
+}
+@font-face {
+  font-family: assistantBold;
+  src: url("../assets/fonts/Assistant/Assistant-Bold.ttf");
+}
+@font-face {
+  font-family: DMSans;
+  src: url("../assets/fonts/dm_sans/DMSans-Regular.ttf");
+}
+@font-face {
+  font-family: DMSansMedium;
+  src: url("../assets/fonts/dm_sans/DMSans-Medium.ttf");
+}
+@font-face {
+  font-family: DMSansSemiBold;
+  src: url("../assets/fonts/dm_sans/DMSans-SemiBold.ttf");
+}
+@font-face {
+  font-family: DMSansBold;
+  src: url("../assets/fonts/dm_sans/DMSans-Bold.ttf");
+}
+*{
+  font-family: DMSans;
+}
