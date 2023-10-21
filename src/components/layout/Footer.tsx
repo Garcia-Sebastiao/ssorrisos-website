@@ -11,8 +11,8 @@ import Button from "../common/Button";
 
 export default function Footer() {
   return (
-    <footer className="w-full flex flex-col relative   bg-secondaryColor -mt-24">
-      <div className="flex items-start gap-10 justify-between px-20 py-36 2xl:px-80">
+    <footer className="w-full flex flex-col relative bg-secondaryColor -mt-24">
+      <div className="flex items-start gap-10 md:justify-center lg:justify-between xs:px-6 lg:px-20 py-36 2xl:px-80  xs:flex-wrap lg:flex-nowrap">
         <div className="flex flex-col gap-4">
           <Title className="text-white text-2xl">Midias Sociais</Title>
 
@@ -124,7 +124,7 @@ export default function Footer() {
       </div>
 
       <div className="w-full bg-primaryColor p-6 flex items-center justify-center">
-        <span className="text-white">
+        <span className="text-white text-center">
           © Copyright 2023 Desenvolvido Garcia Sebastião e Mantido por Luís Afonso Caputo
         </span>
       </div>

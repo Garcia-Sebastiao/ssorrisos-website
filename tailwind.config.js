@@ -23,6 +23,9 @@ module.exports = {
         secondaryColor: "#1e1e1e",
         primaryFont: "#404040",
       },
+      screens: {
+        xs: "360px",
+      },
     },
   },
   plugins: [],

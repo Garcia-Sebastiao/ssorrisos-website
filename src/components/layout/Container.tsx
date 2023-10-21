@@ -7,7 +7,7 @@ export default function Container({
 }) {
   return (
     <section
-      className={`${className} w-full xs:px-14 lg:px-44 2xl:px-80 py-20 flex items-center`}
+      className={`${className} w-full xs:px-6 lg:px-44 2xl:px-80 py-20 flex items-center`}
     >
       {children}
     </section>
