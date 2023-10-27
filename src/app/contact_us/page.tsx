@@ -84,7 +84,7 @@ export default function Main() {
 
               <div className="flex flex-col">
                 <small className="font-DMSansMedium text-gray-500">
-                  info@ssorrisos.com
+                  ssorrisosclinica@gmail.com
                 </small>
                 <span className="text-primaryFont font-DMSansSemiBold">
                   Envie-nos um email
