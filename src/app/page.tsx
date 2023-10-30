@@ -165,7 +165,9 @@ export default function Main() {
             Venha conhecer nossa clínica e renove seu sorriso.
           </span>
 
-          <Button>AGENDAR MINHA CONSULTA AGORA</Button>
+          <Link href={'https://api.whatsapp.com/send/?phone=244926726041'} target="blank">
+            <Button>AGENDAR MINHA CONSULTA AGORA</Button>
+          </Link>
         </Animation>
       </Container>
 
