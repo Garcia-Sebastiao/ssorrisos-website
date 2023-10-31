@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import Menu from "@/components/layout/Menu";
 import { useState } from "react";
 import SearchModal from "@/components/layout/SearchModal";
+import { SPECIALTIES, SPECIALTIES_CONTENTS } from "@/infra";
 
 export default function Main() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -64,7 +65,7 @@ export default function Main() {
         <Animation position="fade-right" className="flex flex-col gap-4 ">
           <Title className="text-3xl">Nossas Especialidades</Title>
           <span className="text-sm text-gray-400 max-w-xs">
-            Disponha de excelentes serviços de alta qualidade.
+            Disponha de excelentes serviços e de alta qualidade.
           </span>
         </Animation>
 
@@ -80,12 +81,11 @@ export default function Main() {
             </div>
 
             <p className="text-sm text-gray-400  max-w-xs leading-loose">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-              aspernatur molestiae quam placeat et,
+            {SPECIALTIES[0].INFO}
             </p>
 
             <Link
-              href="#"
+              href={SPECIALTIES[0].WEB_PAGE}
               className="py-4 px-8 rounded-full bg-gray-300 text-sm text-gray-500 hover:brightness-75 transition duration-150"
             >
               Ver mais
@@ -103,12 +103,11 @@ export default function Main() {
             </div>
 
             <p className="text-sm text-gray-400  max-w-xs leading-loose">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-              aspernatur molestiae quam placeat et,
+              {SPECIALTIES[1].INFO}
             </p>
 
             <Link
-              href="#"
+              href={SPECIALTIES[1].WEB_PAGE}
               className="py-4 px-8 rounded-full bg-gray-300 text-sm text-gray-500 hover:brightness-75 transition duration-150"
             >
               Ver mais
@@ -126,12 +125,11 @@ export default function Main() {
             </div>
 
             <p className="text-sm text-gray-400  max-w-xs leading-loose">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-              aspernatur molestiae quam placeat et,
+              {SPECIALTIES[2].INFO}
             </p>
 
             <Link
-              href="#"
+              href={SPECIALTIES[2].WEB_PAGE}
               className="py-4 px-8 rounded-full bg-gray-300 text-sm text-gray-500 hover:brightness-75 transition duration-150"
             >
               Ver mais

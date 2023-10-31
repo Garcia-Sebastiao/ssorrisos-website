@@ -8,6 +8,7 @@ import {
   twitterIconWhite,
 } from "@/assets";
 import Button from "../common/Button";
+import { SOCIAL_MEDIAS } from "@/infra";
 
 export default function Footer() {
   return (
@@ -22,13 +23,13 @@ export default function Footer() {
 
           <div className="flex items-center gap-3">
             <Link
-              href=""
+              href={SOCIAL_MEDIAS.FACEBOOK}
               className="p-3 rounded-full bg-primaryColor flex items-center justify-center"
             >
               <Image className="w-5" src={facebookIconWhite} alt="Facebook" />
             </Link>
             <Link
-              href="https://www.instagram.com/clinicadentaria_ssorrisos/"
+              href={SOCIAL_MEDIAS.INSTAGRAM}
               className="p-3 rounded-full bg-primaryColor flex items-center justify-center"
             >
               <Image className="w-5" src={instagramIconWhite} alt="Facebook" />
@@ -93,7 +94,7 @@ export default function Footer() {
           <Title className="text-white text-2xl">Marcar Consulta</Title>
 
           <Button className="bg-[#1a1a1a] pl-28">CLIQUE AQUI</Button>
-          <Link href={'https://api.whatsapp.com/send/?phone=244926726041'} target="blank">
+          <Link href={SOCIAL_MEDIAS.WHATSHAPP} target="blank">
           <button className="px-20 py-2 rounded-md bg-primaryColor text-white hover:brightness-75 transition duration-150">
             Nosso WhatsApp
           </button>
