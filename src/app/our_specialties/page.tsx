@@ -11,6 +11,7 @@ import Animation from "@/components/common/Animation";
 import Menu from "@/components/layout/Menu";
 import { useState } from "react";
 import SearchModal from "@/components/layout/SearchModal";
+import { SPECIALTIES } from "@/infra";
 
 export default function Main() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -47,46 +48,17 @@ export default function Main() {
       </section>
 
       <Container className="pb-56 justify-start gap-16 flex-wrap">
-        <SpecialtyCard
-          specialty="Implantologia"
-          description="Substituição de dentes perdidos com implante dentário."
-        />
-        <SpecialtyCard
-          specialty="Odontopediatria"
-          description="Consulta dentária para menores"
-        />
-        <SpecialtyCard
-          specialty="Desisteria e Estética"
-          description=" Reconstrução dos dentes cariados, encerramento dos espaços e branqueamentos."
-        />
-        <SpecialtyCard
-          specialty="Pediorontologia"
-          description="Tratamento das estruturas de suporte dos dentes."
-        />
-        <SpecialtyCard
-          specialty="Endodontia"
-          description=" Remoção da polpa dent+aria vulgarmente designada por desvitalização"
-        />
-        <SpecialtyCard
-          specialty="Facetas Dentárias"
-          description="Revestimento de material Estético desenhado e personalizado que adere e cobre toda a superfície da parte anterior dos dentes."
-        />
-        <SpecialtyCard
-          specialty="Prótese Fixa"
-          description=" Protése de cerâmica ou resinas sobre dentes naturais ou implantes."
-        />
-        <SpecialtyCard
-          specialty="Protése Removível"
-          description=" Protese de metal ou acrílico que pode ser retirada para limpeza pela pessoa que a usa."
-        />
-        <SpecialtyCard
-          specialty="Ortodontia"
-          description=" Correção dos dentes e dos ossos maxilares."
-        />
-        <SpecialtyCard
-          specialty="Profilaxia e Higiene Oral"
-          description=" Manutenção e limpeza da cavidade Oral."
-        />
+        {
+          SPECIALTIES.map((specialty, index) => {
+            return (
+              <SpecialtyCard
+                key={index}
+                specialty={specialty.NAME}
+                description={specialty.DESCRIPTION}
+              />
+            )
+          })
+        }
       </Container>
 
       <ContactsBanner />

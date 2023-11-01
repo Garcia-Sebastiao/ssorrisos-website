@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 import Menu from "@/components/layout/Menu";
 import { useState } from "react";
 import SearchModal from "@/components/layout/SearchModal";
-import { SPECIALTIES, SPECIALTIES_CONTENTS } from "@/infra";
+import { SOCIAL_MEDIAS, SPECIALTIES_TYPE } from "@/infra";
 
 export default function Main() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -28,7 +28,7 @@ export default function Main() {
       />
       <Header page="home" openSearchModal={() => openSearchModal(true)} openMenu={() => setOpenMenu(true)} />
       <Menu page="home" isOpen={openMenu} closeMenu={() => setOpenMenu(false)} />
-      
+
 
       <section className="w-full h-[80vh]  relative bg-gray-400">
         <Image
@@ -73,7 +73,7 @@ export default function Main() {
           <Animation
             position="zoom-in-up"
             className="flex flex-col items-start gap-6"
-          >
+          > 
             <div className="relative">
               <Title className="text-2xl">Consulta Adulto</Title>
 
@@ -81,11 +81,11 @@ export default function Main() {
             </div>
 
             <p className="text-sm text-gray-400  max-w-xs leading-loose">
-            {SPECIALTIES[0].INFO}
+              {SPECIALTIES_TYPE[0].INFO}
             </p>
 
             <Link
-              href={SPECIALTIES[0].WEB_PAGE}
+              href={SPECIALTIES_TYPE[0].WEB_PAGE}
               className="py-4 px-8 rounded-full bg-gray-300 text-sm text-gray-500 hover:brightness-75 transition duration-150"
             >
               Ver mais
@@ -103,11 +103,11 @@ export default function Main() {
             </div>
 
             <p className="text-sm text-gray-400  max-w-xs leading-loose">
-              {SPECIALTIES[1].INFO}
+              {SPECIALTIES_TYPE[1].INFO}
             </p>
 
             <Link
-              href={SPECIALTIES[1].WEB_PAGE}
+              href={SPECIALTIES_TYPE[1].WEB_PAGE}
               className="py-4 px-8 rounded-full bg-gray-300 text-sm text-gray-500 hover:brightness-75 transition duration-150"
             >
               Ver mais
@@ -125,11 +125,11 @@ export default function Main() {
             </div>
 
             <p className="text-sm text-gray-400  max-w-xs leading-loose">
-              {SPECIALTIES[2].INFO}
+              {SPECIALTIES_TYPE[2].INFO}
             </p>
 
             <Link
-              href={SPECIALTIES[2].WEB_PAGE}
+              href={SPECIALTIES_TYPE[2].WEB_PAGE}
               className="py-4 px-8 rounded-full bg-gray-300 text-sm text-gray-500 hover:brightness-75 transition duration-150"
             >
               Ver mais
@@ -163,7 +163,7 @@ export default function Main() {
             Venha conhecer nossa clínica e renove seu sorriso.
           </span>
 
-          <Link href={'https://api.whatsapp.com/send/?phone=244926726041'} target="blank">
+          <Link href={SOCIAL_MEDIAS.WHATSHAPP} target="blank">
             <Button>AGENDAR MINHA CONSULTA AGORA</Button>
           </Link>
         </Animation>
