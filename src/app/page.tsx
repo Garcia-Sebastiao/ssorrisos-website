@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import Menu from "@/components/layout/Menu";
 import { useState } from "react";
 import SearchModal from "@/components/layout/SearchModal";
+import { SOCIAL_MEDIAS, SPECIALTIES_TYPE } from "@/infra";
 
 export default function Main() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -27,7 +28,7 @@ export default function Main() {
       />
       <Header page="home" openSearchModal={() => openSearchModal(true)} openMenu={() => setOpenMenu(true)} />
       <Menu page="home" isOpen={openMenu} closeMenu={() => setOpenMenu(false)} />
-      
+
 
       <section className="w-full h-[80vh]  relative bg-gray-400">
         <Image
@@ -64,7 +65,7 @@ export default function Main() {
         <Animation position="fade-right" className="flex flex-col gap-4 ">
           <Title className="text-3xl">Nossas Especialidades</Title>
           <span className="text-sm text-gray-400 max-w-xs">
-            Disponha de excelentes serviços de alta qualidade.
+            Disponha de excelentes serviços e de alta qualidade.
           </span>
         </Animation>
 
@@ -72,7 +73,7 @@ export default function Main() {
           <Animation
             position="zoom-in-up"
             className="flex flex-col items-start gap-6"
-          >
+          > 
             <div className="relative">
               <Title className="text-2xl">Consulta Adulto</Title>
 
@@ -80,12 +81,11 @@ export default function Main() {
             </div>
 
             <p className="text-sm text-gray-400  max-w-xs leading-loose">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-              aspernatur molestiae quam placeat et,
+              {SPECIALTIES_TYPE[0].INFO}
             </p>
 
             <Link
-              href="#"
+              href={SPECIALTIES_TYPE[0].WEB_PAGE}
               className="py-4 px-8 rounded-full bg-gray-300 text-sm text-gray-500 hover:brightness-75 transition duration-150"
             >
               Ver mais
@@ -103,12 +103,11 @@ export default function Main() {
             </div>
 
             <p className="text-sm text-gray-400  max-w-xs leading-loose">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-              aspernatur molestiae quam placeat et,
+              {SPECIALTIES_TYPE[1].INFO}
             </p>
 
             <Link
-              href="#"
+              href={SPECIALTIES_TYPE[1].WEB_PAGE}
               className="py-4 px-8 rounded-full bg-gray-300 text-sm text-gray-500 hover:brightness-75 transition duration-150"
             >
               Ver mais
@@ -126,12 +125,11 @@ export default function Main() {
             </div>
 
             <p className="text-sm text-gray-400  max-w-xs leading-loose">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-              aspernatur molestiae quam placeat et,
+              {SPECIALTIES_TYPE[2].INFO}
             </p>
 
             <Link
-              href="#"
+              href={SPECIALTIES_TYPE[2].WEB_PAGE}
               className="py-4 px-8 rounded-full bg-gray-300 text-sm text-gray-500 hover:brightness-75 transition duration-150"
             >
               Ver mais
@@ -165,7 +163,9 @@ export default function Main() {
             Venha conhecer nossa clínica e renove seu sorriso.
           </span>
 
-          <Button>AGENDAR MINHA CONSULTA AGORA</Button>
+          <Link href={SOCIAL_MEDIAS.WHATSHAPP} target="blank">
+            <Button>AGENDAR MINHA CONSULTA AGORA</Button>
+          </Link>
         </Animation>
       </Container>
 

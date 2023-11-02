@@ -19,6 +19,7 @@ import Animation from "@/components/common/Animation";
 import { useState, useEffect } from "react";
 import SearchModal from "@/components/layout/SearchModal";
 import Menu from "@/components/layout/Menu";
+import { MEMBERS_TEAM } from "@/infra";
 
 export default function Main() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -124,21 +125,16 @@ export default function Main() {
           </Animation>
 
           <div className="flex items-start xs:flex-wrap-reverse lg:flex-nowrap gap-14">
-            <MemberCard
-              name="Dra. Elizabeth Suraia"
-              role="Médica Odontologica"
-              image={member01}
-            />
-            <MemberCard
-              name="Marlene Sapalo"
-              role="Assistente"
-              image={member02}
-            />
-            <MemberCard
-              name="Felismino Caculo Cafina"
-              role="Designer Gráfico"
-              image={member03}
-            />
+            {
+              MEMBERS_TEAM.map((member, index) => (
+                <MemberCard
+                  key={index}
+                  name={member.NAME}
+                  role={member.SPECIALTY}
+                  image={member.PICTURE}
+                />
+              ))
+            }
           </div>
         </div>
       </Container>

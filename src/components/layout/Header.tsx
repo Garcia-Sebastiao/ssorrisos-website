@@ -15,6 +15,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { SOCIAL_MEDIAS } from "@/infra";
 
 export default function Header({
   openSearchModal,
@@ -52,8 +53,12 @@ export default function Header({
           </span>
 
           <div className="items-center gap-4 xs:hidden lg:flex">
-            <Image src={instagramIcon} className="w-5" alt="" />
-            <Image src={facebookIcon} className="w-5" alt="" />
+            <Link href={SOCIAL_MEDIAS.INSTAGRAM}>
+              <Image src={instagramIcon} className="w-5" alt="" />
+              </Link>
+            <Link href={SOCIAL_MEDIAS.FACEBOOK}>            
+              <Image src={facebookIcon} className="w-5" alt="" />
+            </Link>
             <Image src={twitterIcon} className="w-5" alt="" />
           </div>
         </div>
@@ -133,11 +138,10 @@ export default function Header({
           whileInView={menuFixed ? { y: 0, opacity: 1 } : {}}
           exit={{}}
           transition={{ duration: 1 }}
-          className={`w-full flex justify-between items-center py-3 px-8 rounded-lg bg-secondaryColor ${
-            menuFixed
+          className={`w-full flex justify-between items-center py-3 px-8 rounded-lg bg-secondaryColor ${menuFixed
               ? "fixed top-0 rounded-none px-6 2xl:px-80 z-[999]"
               : "block"
-          }`}
+            }`}
         >
           <button onClick={openMenu} className="xs:block lg:hidden">
             <Image src={menuIcon} alt="Menu" className="w-5" />

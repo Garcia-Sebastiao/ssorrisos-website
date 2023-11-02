@@ -30,6 +30,7 @@ import member01 from "./images/banners/11.jpeg";
 import member02 from "./images/banners/12.jpeg";
 import member03 from "./images/banners/13.jpeg";
 import member04 from "./images/banners/14.jpeg";
+import member05 from "./images/banners/15.jpg";
 
 // SHAPES
 import texture01 from "./images/shapes/blog-one-shape.png";
@@ -71,4 +72,5 @@ export {
   member02,
   member03,
   member04,
+  member05,
 };

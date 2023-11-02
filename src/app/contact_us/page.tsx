@@ -129,7 +129,7 @@ export default function Main() {
               placeholder="Telefone"
             />
             <input
-              type="email"
+              type="text"
               className="p-4 rounded-md outline-none bg-slate-100 w-full text-gray-500"
               placeholder="Assunto"
             />
