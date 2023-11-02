@@ -17,7 +17,7 @@ export default function Main() {
   const [openMenu, setOpenMenu] = useState(false);
   const [searchModal, openSearchModal] = useState(false);
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       <SearchModal
         isOpen={searchModal}
         onClose={() => openSearchModal(false)}
